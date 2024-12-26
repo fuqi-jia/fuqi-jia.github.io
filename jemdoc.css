@@ -372,3 +372,18 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+
+/* Education */
+.education {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+.university {
+flex: 1;
+text-align: left;
+}
+.year {
+flex: 1;
+text-align: right;
+}
