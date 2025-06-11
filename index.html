@@ -14,6 +14,7 @@
             --light-grey: #f5f5f5;
             --border-color: #ddd;
             --highlight-color: #e74c3c;
+            --code-color: #28a745;
         }
         
         * {
@@ -145,6 +146,29 @@
             border-left: 3px solid var(--primary-color);
             background-color: var(--light-grey);
             border-radius: 0 5px 5px 0;
+        }
+        
+        .paper-links {
+            margin-top: 3px;
+            display: flex;
+            gap: 8px;
+        }
+        
+        .paper-links a {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.85rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .paper-links a.code-link {
+            color: var(--code-color);
+        }
+        
+        .paper-links a.code-link:hover {
+            background-color: rgba(40, 167, 69, 0.1);
         }
         
         .award, .presentation {
@@ -284,59 +308,92 @@
             <div class="publication">
                 <a href='https://openreview.net/forum?id=TtURatBOY4'>A Complete Algorithm for Optimization Modulo Nonlinear Real Arithmetic</a> <br>
                 <strong><u>Fuqi Jia</u></strong>, Yuhang Dong, Rui Han, Pei Huang, Minghao Liu, Feifei Ma, Jian Zhang <br>
-                AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2025 <br>
+                AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2025
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/AAAI2025-OMT" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://fmcad.org/FMCAD24/student_forum/'>A Theory-Agnostic SMT Sampling Framework</a> <br>
                 <strong><u>Fuqi Jia</u></strong>, Clark Barrett, Pei Huang, Feifei Ma and Jian Zhang <br>
-                Formal Methods in Computer-Aided Design <strong>(FMCAD, Student Forum)</strong>, 2024 <br>
+                Formal Methods in Computer-Aided Design <strong>(FMCAD, Student Forum)</strong>, 2024
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/SMT-Sampling" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://www.aiverification.org/2024/talks/paper4/'>Parallel Verification for δ-Equivalence of Neural Network Quantization</a> <br>
                 Pei Huang, Yuting Yang, Haoze Wu, Ieva Daukantas, Min Wu, <strong><u>Fuqi Jia</u></strong>, Clark Barrett <br>
-                International Symposium on AI Verification <strong>(SAIV)</strong>, 2024 <br>
+                International Symposium on AI Verification <strong>(SAIV)</strong>, 2024
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/NN-Verification" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://link.springer.com/chapter/10.1007/978-981-99-7022-3_38'>Investigating the Existence of Holey Latin Squares via Satisfiability Testing</a> <br>
                 Minghao Liu, Rui Han, <strong><u>Fuqi Jia</u></strong>, Pei Huang, Feifei Ma, Hantao Zhang, Jian Zhang <br>
-                Pacific Rim International Conference on Artificial Intelligence <strong>(PRICAI)</strong>, 2023 <br>
+                Pacific Rim International Conference on Artificial Intelligence <strong>(PRICAI)</strong>, 2023
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/HLS-Testing" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://openreview.net/forum?id=vNsdFwjPtL'>Suggesting Variable Order for Cylindrical Algebraic Decomposition via Reinforcement Learning</a> <br>
                 <strong><u>Fuqi Jia*</u></strong>, Yuhang Dong*, Minghao Liu, Pei Huang, Feifei Ma, Jian Zhang <br>
-                Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2023 <br>
+                Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2023
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/CAD-RL" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://dl.acm.org/doi/10.1145/3597926.3598034'>Improving Bit-Blasting for Nonlinear Integer Constraints</a> <br>
                 <strong><u>Fuqi Jia</u></strong>, Rui Han, Pei Huang, Minghao Liu, Feifei Ma, Jian Zhang <br>
                 ACM SIGSOFT International Symposium on Software Testing and Analysis <strong>(ISSTA)</strong>, 2023 <br>
-                &#127941; <font color="red"><strong>ACM SIGSOFT Distinguished Paper Award</strong></font> <br>
+                &#127941; <font color="red"><strong>ACM SIGSOFT Distinguished Paper Award</strong></font>
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/ISSTA2023-BitBlasting" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://conf.researchr.org/details/ase-2023/ase-2023-nier-track/6/PSMT-Satisfiability-Modulo-Theories-Meets-Probability-Distribution'>PSMT: Satisfiability Modulo Theories Meets Probability Distribution</a> <br>
                 <strong><u>Fuqi Jia*</u></strong>, Rui Han*, Xutong Ma, Baoquan Cui, Minghao Liu, Pei Huang, Feifei Ma, Jian Zhang <br>
-                IEEE/ACM International Conference on Automated Software Engineering <strong>(ASE, NIER Track)</strong>, 2023 <br>
+                IEEE/ACM International Conference on Automated Software Engineering <strong>(ASE, NIER Track)</strong>, 2023
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/PSMT" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://conf.researchr.org/details/ase-2023/ase-2023-tool-demonstrations/18/NRAgo-Solving-SMT-NRA-Formulas-with-Gradient-based-Optimization'>NRAgo: Solving SMT(NRA) Formulas with Gradient-based Optimization</a> <br>
                 Minghao Liu*, Kunhang Lv*, Pei Huang, Rui Han, <strong><u>Fuqi Jia</u></strong>, Yu Zhang, Feifei Ma, Jian Zhang <br>
-                IEEE/ACM International Conference on Automated Software Engineering <strong>(ASE, Tool Demo Track)</strong>, 2023 <br>
+                IEEE/ACM International Conference on Automated Software Engineering <strong>(ASE, Tool Demo Track)</strong>, 2023
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/NRAgo" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://ojs.aaai.org/index.php/AAAI/article/view/26992'>Can Graph Neural Networks Learn to Solve the MaxSAT Problem?</a> <br>
                 Minghao Liu, Pei Huang, <strong><u>Fuqi Jia</u></strong>, Fan Zhang, Yuchen Sun, Shaowei Cai, Feifei Ma, Jian Zhang <br>
                 AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, Student Abstract and Poster Program, 2023 <br>
-                &#127941; <font color="red"><strong>Best Student Abstract Honorable Mention Award</strong></font> <br>
+                &#127941; <font color="red"><strong>Best Student Abstract Honorable Mention Award</strong></font>
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/GNN-MaxSAT" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://dl.acm.org/doi/10.1145/3533767.3534373'>ε-weakened Robustness of Deep Neural Networks</a> <br>
                 Pei Huang*, Yuting Yang*, Minghao Liu, <strong><u>Fuqi Jia</u></strong>, Feifei Ma, Jian Zhang <br>
-                ACM SIGSOFT International Symposium on Software Testing and Analysis <strong>(ISSTA)</strong>, 2022 <br>
+                ACM SIGSOFT International Symposium on Software Testing and Analysis <strong>(ISSTA)</strong>, 2022
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/epsilon-Robustness" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
             <div class="publication">
                 <a href='https://ojs.aaai.org/index.php/AAAI/article/view/21324'>Word Level Robustness Enhancement: Fight Perturbation with Perturbation</a> <br>
                 Pei Huang*, Yuting Yang*, <strong><u>Fuqi Jia</u></strong>, Minghao Liu, FeiFei Ma, Jian Zhang <br>
-                AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2022 <br>
+                AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2022
+                <div class="paper-links">
+                    <a href="https://github.com/fuqi-jia/WordRobustness" class="code-link"><i class="fas fa-code"></i> Code</a>
+                </div>
             </div>
         </div>
 
