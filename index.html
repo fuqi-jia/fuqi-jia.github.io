@@ -58,10 +58,20 @@
         }
         
         h2 {
-            font-size: 1.4rem;
-            margin-top: 12px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid var(--border-color);
+            font-size: 1.35rem;
+            margin-top: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        h2 i {
+            color: var(--primary-color);
+            font-size: 0.88em;
+            width: 1.05em;
+            text-align: center;
         }
         
         img {
@@ -93,11 +103,12 @@
         }
         
         .section {
-            margin-bottom: 12px;
-            padding: 2px 12px;
+            margin-bottom: 14px;
+            padding: 6px 16px 12px;
             background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+            border: 1px solid #eef0f3;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
         }
         
         ul {
@@ -107,7 +118,7 @@
         }
         
         li {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             position: relative;
         }
         
@@ -138,15 +149,21 @@
         .news-item {
             border-left: 3px solid var(--highlight-color);
             padding-left: 10px;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
         
         .publication {
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 9px 12px;
+            margin-bottom: 8px;
             border-left: 3px solid var(--primary-color);
             background-color: var(--light-grey);
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 6px 6px 0;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .publication:hover {
+            box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+            transform: translateX(2px);
         }
         
         .paper-links {
@@ -180,11 +197,64 @@
             background-color: rgba(232, 62, 140, 0.1);
         }
         
+        .grid-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+        }
+
+        .grid-list .publication {
+            margin-bottom: 0;
+        }
+
         .award, .presentation {
-            padding: 8px 10px;
-            margin-bottom: 8px;
-            border-radius: 5px;
+            margin-bottom: 0;
+            border-radius: 6px;
             background-color: var(--light-grey);
+            font-size: 0.9rem;
+            line-height: 1.35;
+            transition: background-color 0.2s ease;
+        }
+
+        .award:hover, .presentation:hover {
+            background-color: #eaf1fc;
+        }
+
+        .award {
+            position: relative;
+            padding: 7px 12px 7px 34px;
+            border-left: 3px solid #d4af37;
+        }
+
+        .award::before {
+            content: "\f091";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            font-size: 0.82rem;
+            color: #d4af37;
+        }
+
+        .presentation {
+            padding: 7px 12px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .presentation strong {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 0.66rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            padding: 2px 7px;
+            border-radius: 10px;
+            margin-right: 6px;
+            vertical-align: 1px;
+            white-space: nowrap;
         }
         
         .social-links {
@@ -242,6 +312,10 @@
             .year {
                 text-align: left;
             }
+
+            .grid-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -270,7 +344,7 @@
         </div>
 
         <div class="section">
-            <h2>Short Bio</h2>
+            <h2><i class="fas fa-id-card"></i>Short Bio</h2>
             <p>
                 I am currently a PhD student in Computer Science and Technology at the <a href="https://www.ucas.ac.cn/">University of Chinese Academy of Sciences (UCAS)</a> and doing my research at <a href="http://lcs.ios.ac.cn/">State Key Laboratory of Computer Science</a>, <a href="http://www.iscas.ac.cn/">Institute of Software</a>, <a href="http://www.cas.ac.cn/">Chinese Academy of Sciences</a>, under the supervision of <a href="http://lcs.ios.ac.cn/~zj/index.html">Prof. Jian Zhang</a>.
                 From 2024 to 2025, I servied as a visiting PhD student at <a href="https://www.stanford.edu/">Stanford University</a>, supervised by <a href="https://profiles.stanford.edu/clark-barrett?tab=bio">Clark Barrett</a>. 
@@ -282,7 +356,7 @@
         </div>
 
         <div class="section">
-            <h2>Education</h2>
+            <h2><i class="fas fa-graduation-cap"></i>Education</h2>
             <div class="education">
                 <div class="university">University of Chinese Academy of Sciences</div>
                 <div class="degree">Ph.D. Student</div>
@@ -301,7 +375,7 @@
         </div>
 
         <div class="section">
-            <h2>Recent News</h2>
+            <h2><i class="fas fa-bullhorn"></i>Recent News</h2>
             <ul>
                 <li class="news-item"><strong><font color="red">[2025.01]</font> Our paper has been selected for oral presentation by <a href="https://aaai.org/conference/aaai/aaai-25/main-technical-track/">AAAI 2025</a>.</strong></li>
                 <li class="news-item"><strong><font color="red">[2023.09]</font> One full paper is accepted by <a href="https://neurips.cc/">NeurIPS 2023</a>.</strong></li>
@@ -310,7 +384,7 @@
         </div>
 
         <div class="section">
-            <h2>Publications</h2>
+            <h2><i class="fas fa-book"></i>Publications</h2>
             <p><em>(* indicates equal contribution)</em></p>
             <div class="publication">
                 <a href='https://journal.hep.com.cn/fcs/EN/10.1007/s11704-025-41190-x'>AllDiff-LS: Solving Alldifferent Constraints with Efficient Local Search</a> <br>
@@ -442,94 +516,103 @@
         </div>
 
         <div class="section">
-            <h2>Open Source Projects</h2>
-            
-            <div class="publication" style="border-left: 3px solid var(--code-color);">
-                <a href='https://github.com/fuqi-jia/SMTParser'><strong>SMTParser</strong></a> <br>
-                A frontend for parsing and processing SMT-LIB / OMT format formulas, supporting C++ interfaces.<br>
-                <div class="paper-links">
-                    <a href="https://github.com/fuqi-jia/SMTParser" class="code-link"><i class="fas fa-code"></i> Code</a>
+            <h2><i class="fas fa-trophy"></i>Selected Awards &amp; Scholarships</h2>
+            <div class="grid-list">
+                <div class="award">
+                    <strong>Outstanding Graduate of Beijing</strong>, 2026.
                 </div>
-            </div>
-            
-            <div class="publication" style="border-left: 3px solid var(--code-color);">
-                <a href='https://github.com/fuqi-jia/BLAN'><strong>BLAN</strong></a> <br>
-                BLAN: Bit-bLAsting solving Non-linear integer constraints.<br>
-                <div class="paper-links">
-                    <a href="https://github.com/fuqi-jia/BLAN" class="code-link"><i class="fas fa-code"></i> Code</a>
+                <div class="award">
+                    <strong>Outstanding Graduate of UCAS</strong>, 2026.
                 </div>
-            </div>
-
-            <div class="publication" style="border-left: 3px solid var(--code-color);">
-                <a href='https://github.com/fuqi-jia/cdcl_ocac'><strong>CDCL(OCAC)</strong></a> <br>
-                CDCL(OCAC): A complete algorithm for optimization modulo nonlinear real arithmetic.<br>
-                <div class="paper-links">
-                    <a href="https://github.com/fuqi-jia/cdcl_ocac" class="code-link"><i class="fas fa-code"></i> Code</a>
+                <div class="award">
+                    <strong>BYD Scholarship</strong>, 2025.12.
                 </div>
-            </div>
-            
-            <div class="publication" style="border-left: 3px solid var(--code-color);">
-                <a href='https://github.com/fuqi-jia/Splitwise-MILP'><strong>Splitwise-MILP</strong></a> <br>
-                The Splitwise-like algorithm for sharing expenses using MILP encoding.<br>
-                <div class="paper-links">
-                    <a href="https://github.com/fuqi-jia/Splitwise-MILP" class="code-link"><i class="fas fa-code"></i> Code</a>
+                <div class="award">
+                    <strong>Outstanding Doctoral Student</strong>, Chinasoft 2023, 2023.11.
+                </div>
+                <div class="award">
+                    <strong>National Scholarship of China</strong>, 2023.10.
+                </div>
+                <div class="award">
+                    <strong>First Prize Scholarship of UCAS</strong>, 2023.10.
+                </div>
+                <div class="award">
+                    <strong>SMT Competition</strong>, QF_NIA Single Query / Model Validation Track, 2nd Place (Main Author), 2023.08.
+                </div>
+                <div class="award">
+                    <strong>ACM SIGSOFT Distinguished Paper Award</strong>, ISSTA 2023, 2023.07.
+                </div>
+                <div class="award">
+                    <strong>Best Student Abstract Honorable Mention Award</strong>, AAAI 2023, 2023.02.
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Selected Awards &amp; Scholarships</h2>
-            <div class="award">
-                <strong>Outstanding Graduate of Beijing</strong>, 2026.
-            </div>
-            <div class="award">
-                <strong>Outstanding Graduate of UCAS</strong>, 2026.
-            </div>
-            <div class="award">
-                <strong>BYD Scholarship</strong>, 2025.12.
-            </div>
-            <div class="award">
-                <strong>Outstanding Doctoral Student</strong>, Chinasoft 2023, 2023.11.
-            </div>
-            <div class="award">
-                <strong>National Scholarship of China</strong>, 2023.10.
-            </div>
-            <div class="award">
-                <strong>First Prize Scholarship of UCAS</strong>, 2023.10.
-            </div>
-            <div class="award">
-                <strong>SMT Competition</strong>, QF_NIA Single Query / Model Validation Track, 2nd Place (Main Author), 2023.08.
-            </div>
-            <div class="award">
-                <strong>ACM SIGSOFT Distinguished Paper Award</strong>, ISSTA 2023, 2023.07.
-            </div>
-            <div class="award">
-                <strong>Best Student Abstract Honorable Mention Award</strong>, AAAI 2023, 2023.02.
+            <h2><i class="fas fa-microphone"></i>Presentations</h2>
+            <div class="grid-list">
+                <div class="presentation">
+                    <strong>Conference Talk</strong> Improving Bit-Blasting for Nonlinear Integer Constraints, ISSTA 2023, Virtual Event.
+                </div>
+                <div class="presentation">
+                    <strong>Conference Talk</strong> PSMT: Satisfiability Modulo Theories Meets Probability Distribution, ASE 2023, Luxembourg.
+                </div>
+                <div class="presentation">
+                    <strong>Conference Talk</strong> NRAgo: Solving SMT(NRA) Formulas with Gradient-based Optimization, ASE 2023, Luxembourg.
+                </div>
+                <div class="presentation">
+                    <strong>Seminar Talk</strong> Satisfiability and Deep Learning, Applied Mathematics Seminar for Youth, Peking University, Beijing, China.
+                </div>
+                <div class="presentation">
+                    <strong>Seminar Talk</strong> Solving Reasoning Problems with Neuro-Symbolic Methods, Dagstuhl Seminar 23471, Dagstuhl, Germany.
+                </div>
+                <div class="presentation">
+                    <strong>Seminar Talk</strong> Improving SMT Solving via Incorporating More Techniques, Dagstuhl Seminar 23471, Dagstuhl, Germany.
+                </div>
+                <div class="presentation">
+                    <strong>Conference Talk</strong> A Theory-Agnostic SMT Sampling Framework (Poster), FMCAD 2024, Prague, Czech Republic.
+                </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Presentations</h2>
-            <div class="presentation">
-                <strong>Conference Talk</strong> Improving Bit-Blasting for Nonlinear Integer Constraints, ISSTA 2023, Virtual Event.
-            </div>
-            <div class="presentation">
-                <strong>Conference Talk</strong> PSMT: Satisfiability Modulo Theories Meets Probability Distribution, ASE 2023, Luxembourg.
-            </div>
-            <div class="presentation">
-                <strong>Conference Talk</strong> NRAgo: Solving SMT(NRA) Formulas with Gradient-based Optimization, ASE 2023, Luxembourg.
-            </div>
-            <div class="presentation">
-                <strong>Seminar Talk</strong> Satisfiability and Deep Learning, Applied Mathematics Seminar for Youth, Peking University, Beijing, China.
-            </div>
-            <div class="presentation">
-                <strong>Seminar Talk</strong> Solving Reasoning Problems with Neuro-Symbolic Methods, Dagstuhl Seminar 23471, Dagstuhl, Germany.
-            </div>
-            <div class="presentation">
-                <strong>Seminar Talk</strong> Improving SMT Solving via Incorporating More Techniques, Dagstuhl Seminar 23471, Dagstuhl, Germany.
-            </div>
-            <div class="presentation">
-                <strong>Conference Talk</strong> A Theory-Agnostic SMT Sampling Framework (Poster), FMCAD 2024, Prague, Czech Republic.
+            <h2><i class="fas fa-code-branch"></i>Open Source Projects</h2>
+            <div class="grid-list">
+                <div class="publication" style="border-left: 3px solid var(--code-color);">
+                    <a href='https://github.com/fuqi-jia/Xolver'><strong>Xolver</strong></a> <br>
+                    Xolver: A Satisfiability Modulo Theories (SMT) solver.<br>
+                    <div class="paper-links">
+                        <a href="https://github.com/fuqi-jia/Xolver" class="code-link"><i class="fas fa-code"></i> Code</a>
+                    </div>
+                </div>
+                <div class="publication" style="border-left: 3px solid var(--code-color);">
+                    <a href='https://github.com/fuqi-jia/SMTParser'><strong>SMTParser</strong></a> <br>
+                    A frontend for parsing and processing SMT-LIB / OMT format formulas, supporting C++ interfaces.<br>
+                    <div class="paper-links">
+                        <a href="https://github.com/fuqi-jia/SMTParser" class="code-link"><i class="fas fa-code"></i> Code</a>
+                    </div>
+                </div>
+                <div class="publication" style="border-left: 3px solid var(--code-color);">
+                    <a href='https://github.com/fuqi-jia/BLAN'><strong>BLAN</strong></a> <br>
+                    BLAN: Bit-bLAsting solving Non-linear integer constraints.<br>
+                    <div class="paper-links">
+                        <a href="https://github.com/fuqi-jia/BLAN" class="code-link"><i class="fas fa-code"></i> Code</a>
+                    </div>
+                </div>
+                <div class="publication" style="border-left: 3px solid var(--code-color);">
+                    <a href='https://github.com/fuqi-jia/cdcl_ocac'><strong>CDCL(OCAC)</strong></a> <br>
+                    CDCL(OCAC): A complete algorithm for optimization modulo nonlinear real arithmetic.<br>
+                    <div class="paper-links">
+                        <a href="https://github.com/fuqi-jia/cdcl_ocac" class="code-link"><i class="fas fa-code"></i> Code</a>
+                    </div>
+                </div>
+                <div class="publication" style="border-left: 3px solid var(--code-color);">
+                    <a href='https://github.com/fuqi-jia/Splitwise-MILP'><strong>Splitwise-MILP</strong></a> <br>
+                    The Splitwise-like algorithm for sharing expenses using MILP encoding.<br>
+                    <div class="paper-links">
+                        <a href="https://github.com/fuqi-jia/Splitwise-MILP" class="code-link"><i class="fas fa-code"></i> Code</a>
+                    </div>
+                </div>
             </div>
         </div>
 
